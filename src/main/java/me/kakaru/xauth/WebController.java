@@ -31,7 +31,7 @@ public class WebController {
     boolean checkAuthHeader(String authHeader) {
         if (StringUtils.isEmpty(authHeader)) {
             return false;
-        } else if (AUTH_HEADER.equals(authHeader)) {
+        } else if (!ALLOWED_VALUE.equals(authHeader)) {
             return false;
         }
 
